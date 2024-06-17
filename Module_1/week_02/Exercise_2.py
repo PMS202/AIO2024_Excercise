@@ -35,7 +35,7 @@ def words_counting(file_path):
 
     with open(file_path, "r") as file:
         content = file.read()
-    print(content.split())
+    # print(content.split())
     result = {}
 
     for i in content.split():
@@ -53,7 +53,7 @@ def levenshtein_distance(source, target):
    # step 1: create array m x n
     n = len(source) + 1
     m = len(target) + 1
-    arr = [[0]*m for i in range(n)]
+    arr = [[0]*m for _ in range(n)]
 
     # step 2: fill in first row and column
     for i in range(m):
@@ -88,14 +88,16 @@ if __name__ == "__main__":
     print(max_over_kernel(num_list, k))
 
 # 2 Answer
-    string = 'Happiness'
+    string = 'smiles'
     print(count_chars(string))
 
 # 3 Answer
     file_path = "D:\Hoc\AIO2024\AIO2024_Excercise\Module_1\week_02\P1_data.txt"
-    print(words_counting(file_path))
+    result = words_counting(file_path)
+    print(result['man'])
+
 
 # 4 Answer
-    source = "yu"
-    target = "you"
+    source = "hola"
+    target = "hello"
     print(levenshtein_distance(source, target))
