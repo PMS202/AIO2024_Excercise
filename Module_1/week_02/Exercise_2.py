@@ -1,7 +1,3 @@
-# 1. Cho một list các số nguyên num_list và một sliding window có kích thước size k di
-# chuyển từ trái sang phải. Mỗi lần dịch chuyển 1 vị trí sang phải có thể nhìn thấy
-# đươc k số trong num_list và tìm số lớn nhất trong k số này sau mỗi lần trượt k phải
-# lớn hơn hoặc bằng 1
 
 def max_over_kernel(lst, k):
     result = []
@@ -15,9 +11,6 @@ def max_over_kernel(lst, k):
     return result
 
 
-# 2. Viết function trả về một dictionary đếm số lượng chữ xuất hiện trong một từ, với key là chữ cái
-# và value là số lần xuất hiện
-
 def count_chars(str):
     result = {}
     for i in str.lower():
@@ -27,9 +20,6 @@ def count_chars(str):
             result[i] = 1
     return result
 
-
-# 3. Viết function đọc các câu trong một file txt, đếm số lượng các từ xuất hiện và trả về một dictionary
-# với key là từ và value là số lần từ đó xuất hiện.
 
 def words_counting(file_path):
 
@@ -46,8 +36,6 @@ def words_counting(file_path):
 
     return result
 
-
-# 4. Khoảng cách Levenshtein.
 
 def levenshtein_distance(source, target):
    # step 1: create array m x n
