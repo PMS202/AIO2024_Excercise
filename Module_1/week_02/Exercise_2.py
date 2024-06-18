@@ -65,7 +65,6 @@ def levenshtein_distance(source, target):
             ins_cost = arr[i][j-1] + 1
             sub_cost = arr[i-1][j-1] + cost
             arr[i][j] = min(del_cost, ins_cost, sub_cost)
-    # print( arr )
     return arr[n-1][m-1]
 
 
