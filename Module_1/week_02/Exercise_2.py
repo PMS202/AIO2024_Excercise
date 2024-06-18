@@ -1,7 +1,3 @@
-# 1. Cho một list các số nguyên num_list và một sliding window có kích thước size k di
-# chuyển từ trái sang phải. Mỗi lần dịch chuyển 1 vị trí sang phải có thể nhìn thấy
-# đươc k số trong num_list và tìm số lớn nhất trong k số này sau mỗi lần trượt k phải
-# lớn hơn hoặc bằng 1
 
 def max_over_kernel(lst, k):
     result = []
@@ -15,9 +11,6 @@ def max_over_kernel(lst, k):
     return result
 
 
-# 2. Viết function trả về một dictionary đếm số lượng chữ xuất hiện trong một từ, với key là chữ cái
-# và value là số lần xuất hiện
-
 def count_chars(str):
     result = {}
     for i in str.lower():
@@ -28,14 +21,11 @@ def count_chars(str):
     return result
 
 
-# 3. Viết function đọc các câu trong một file txt, đếm số lượng các từ xuất hiện và trả về một dictionary
-# với key là từ và value là số lần từ đó xuất hiện.
-
 def words_counting(file_path):
 
     with open(file_path, "r") as file:
         content = file.read()
-    print(content.split())
+    # print(content.split())
     result = {}
 
     for i in content.split():
@@ -47,13 +37,11 @@ def words_counting(file_path):
     return result
 
 
-# 4. Khoảng cách Levenshtein.
-
 def levenshtein_distance(source, target):
    # step 1: create array m x n
     n = len(source) + 1
     m = len(target) + 1
-    arr = [[0]*m for i in range(n)]
+    arr = [[0]*m for _ in range(n)]
 
     # step 2: fill in first row and column
     for i in range(m):
@@ -88,14 +76,16 @@ if __name__ == "__main__":
     print(max_over_kernel(num_list, k))
 
 # 2 Answer
-    string = 'Happiness'
+    string = 'smiles'
     print(count_chars(string))
 
 # 3 Answer
     file_path = "D:\Hoc\AIO2024\AIO2024_Excercise\Module_1\week_02\P1_data.txt"
-    print(words_counting(file_path))
+    result = words_counting(file_path)
+    print(result['man'])
+
 
 # 4 Answer
-    source = "yu"
-    target = "you"
+    source = "hola"
+    target = "hello"
     print(levenshtein_distance(source, target))
