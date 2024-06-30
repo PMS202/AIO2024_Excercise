@@ -53,7 +53,6 @@ st.markdown(
             background-position: 0% 50%;
         }
     }
-
     .stApp {
         background: linear-gradient(-45deg, #ff7e5f, #feb47b, #86e3ce, #d4a5a5);
         background-size: 400% 400%;
@@ -85,5 +84,5 @@ def streamlist():
 
 if __name__ == "__main__":
     vocabs = load_vocab(
-        r"C:\Users\MISA\Downloads\Compressed\source\source\data\vocab.txt")
+        r"D:\Hoc\AIO2024\AIO2024_Excercise\Module_1\week_04\Word_Correction\vocab.txt")
     streamlist()
